@@ -1,13 +1,15 @@
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {Button, SafeAreaView, StyleSheet} from 'react-native';
 
 export default function App() {
 
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text >Hello React Native</Text>
+      <Button
+          color={"red"}
+          title="Click Me" onPress={() => console.log("Button Tapped")} />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
