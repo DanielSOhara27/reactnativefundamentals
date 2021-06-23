@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A React Native demo called DoneWithIt by ProgrammingWithMosh https://codewithmosh.com/"
   }
 }
