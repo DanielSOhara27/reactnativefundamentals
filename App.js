@@ -7,11 +7,13 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text >Hello React Native</Text>
+      <Text style={[styles.container, containerStyle]}>Hello React Native</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
+
+const containerStyle = { width:200, height: 200, backgroundColor: "dodgerblue"}
 
 const styles = StyleSheet.create({
   container: {
