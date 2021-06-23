@@ -1,6 +1,6 @@
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import {Image, SafeAreaView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, TouchableNativeFeedback, View} from 'react-native';
 
 export default function App() {
 
@@ -9,14 +9,12 @@ export default function App() {
       <Text >Hello React Native
         {/*<Image source={require('./assets/icon.png')}></Image> This is how you link a static image from your assets folder*/}
       </Text>
-      <Image
-          fadeDuration={1000} /*Only works on Android*/
-          source={{
-        width:200,
-        height:200,
-        uri:"https://picsum.photos/200"}}>
-        {/*In React Native, network images need to have their dimensions specified or they will not be rendered*/}
-      </Image>
+        <TouchableNativeFeedback onPress={() => console.log("Image Tapped")}>
+            {/*The Native Feedback component is only available on Android*/}
+            <View style={ {width: 200, height: 200, backgroundColor: "dodgerblue"}}>
+                {/*Example of component designed for TouchableNativeFeedback only available on Android*/}
+            </View>
+        </TouchableNativeFeedback>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
